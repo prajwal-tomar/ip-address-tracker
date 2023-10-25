@@ -15,7 +15,7 @@ const SearchBar = ({ onSearch }) => {
         placeholder="Enter IP Address or Domain"
         value={searchInput}
         onChange={(e) => setSearchInput(e.target.value)}
-        className="w-96 px-5 border rounded-s-xl h-12"
+        className="md:w-96 w-60 px-5 border rounded-s-xl h-12"
       />
       <button
         onClick={handleSearch}

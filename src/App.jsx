@@ -1,4 +1,5 @@
 import bgDesktop from "./assets/images/pattern-bg-desktop.png";
+import bgPhone from "./assets/images/pattern-bg-mobile.png";
 import InformationPanel from "./components/InformationPanel";
 import SearchBar from "./components/SearchBar";
 import Map from "./components/Map";
@@ -52,17 +53,18 @@ const App = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full font-rubik">
-      <div className="h-1/2 flex flex-col items-center relative z-[1000]">
-        <h1 className="absolute top-[10%] text-3xl text-white font-medium">
+    <div className="min-h-screen font-rubik">
+      <div className="flex flex-col items-center relative z-[1000]">
+        <h1 className="absolute top-[10%] md:text-3xl text-2xl text-white font-medium">
           IP Address Tracker
         </h1>
-        <img src={bgDesktop} alt="bg" className="w-full" />
+        <img src={bgDesktop} alt="bg" className="w-full md:block hidden" />
+        <img src={bgPhone} alt="bg" className="w-full block md:hidden" />
         <div className="absolute top-[35%]">
           <SearchBar />
         </div>
         {ipAddressDetails && (
-          <div className="absolute top-[80%]">
+          <div className="absolute md:top-[80%] top-[70%]">
             <InformationPanel ipAddressDetails={ipAddressDetails} />
           </div>
         )}
