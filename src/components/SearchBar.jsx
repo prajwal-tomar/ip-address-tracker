@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import rightArrow from "../assets/images/icon-arrow.svg"
+import rightArrow from "../assets/images/icon-arrow.svg";
 
-const SearchBar = ({ onSearch }) => {
-  const [searchInput, setSearchInput] = useState('');
-
+const SearchBar = ({ searchInput, setSearchInput, onSearch }) => {
   const handleSearch = () => {
     onSearch(searchInput);
   };
